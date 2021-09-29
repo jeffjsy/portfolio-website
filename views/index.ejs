@@ -6,6 +6,18 @@
   <div class="h-100 p-5 bg-light border rounded-3">
     <h1 class="display-4">Welcome to the <%= title %> page</h1>
   </div>
+  
+  <% if (title == "Home") { %>
+    <p>This is home</p>
+  <% } %>
+  <% if (title == "About me") { %>
+    <p>I like turtles</p>
+  <% } %>  
+  <% if (title == "Projects") { %>
+    <p>projects</p>          
+  <% } %>
+    
+
 </main>
 
 <%- include partials/bottom_nav.ejs %> 
