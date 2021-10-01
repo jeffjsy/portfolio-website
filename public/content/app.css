@@ -1,1 +1,10 @@
 /* custom css goes here */
+
+img {
+  border-radius: 1.7%;
+}
+
+.img-responsive {
+  max-width: 90%; /* or to whatever you want here */  
+  max-height: 50%; /* or to whatever you want here */
+}
