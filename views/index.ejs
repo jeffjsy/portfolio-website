@@ -11,22 +11,52 @@
     <div class="row mb-2">
       <div class="col-md-6">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-          <div class="col p-4 d-flex flex-column position-static">
-            
+          <div class="col p-4 d-flex flex-column position-static">            
             <h3 class="mb-0">Welcome!</h3>
             <div class="mb-1 text-muted">Sept 29, 2021</div>
-            <p class="card-text mt-2">My name is Jeffrey Sy. I am a software, UX/UI, and database engineeer. I like turtles and cakes.</p>
+            <p class="card-text mt-2">My name is Jeffrey Sy. I am a software, UX/UI, and database engineeer. I love to learn and to tinker. Please take a look around.</p>
             <strong class="d-inline-block mb-2 text-end text-primary">-J Sy.</strong>
           </div>
-          <div class="col-auto d-none d-lg-block">
-            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-  
+          <div class="col-auto d-none d-lg-block m-auto">                  
+            <img src="../assets/images/profile.jpg"></img>  
           </div>
         </div>
       </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">            
+            <h3 class="mb-0">Mission Statement</h3>            
+            <p class="mb-auto mt-auto">I want to grow and learn continuously, and use that knowledge to help others and achieve as much as I can. </p>
+            <p></p>            
+            <p>Click to learn more <a href="/about">about me</a> or you can check out <a href="/projects">my projects</a></p>   
+          </div>   
+          </div>
+        </div>
+      </div>
+
   <% } %>
   <% if (title == "About me") { %>
-    <p>I like turtles</p>
+    
+    <div class="row">
+      <div class="col-8">
+        <div class="card">
+          <div class="card-body">
+            My name is Jeffrey Joseph Sy. I am a Toronto based software engineer who believes in personal growth and endless learning. When not in front of my computer I like to stay active by biking, hiking with my dog, and swimming. I am also a huge basketball fan, especially of the Toronto Raptors.
+            <p></p>  
+            <p>If you would like to know more about me, please view one of the links below</p>
+            <ul>
+              <li><a href="../content/JeffreySy_resume_2021.pdf">Work resume</a></li>
+              <li><a href="/projects">Ongoing and completed projects</a></li>
+              <li><a href="/services">Services provided</a></li>
+            </ul> 
+          </div>
+        </div>
+      </div>
+      <div class="col-3">        
+          <img src="../assets/images/profile2.jpg" width="135%">        
+      </div>
+    </div>         
+  </div>
   <% } %>  
   <% if (title == "Projects") { %>
     <p>projects</p>          
