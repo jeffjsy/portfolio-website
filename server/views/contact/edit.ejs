@@ -1,0 +1,66 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Content for Edit Page -->
+<div class="container">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+    <h1><%- title %></h1>
+      <form class="form" method="POST">
+        <div class="form group">
+          <label for="usernameTextField">Username</label>
+          <input type="text" class="form-control"
+          id="usernameTextField"
+          placeholder="Enter the username"
+          name="username" 
+          value="<%- contact.username %>"
+          required>
+        </div>
+
+        <div class="form group">
+          <label for="passwordTextField">Password</label>
+          <input type="text" class="form-control"
+          id="passwordTextField"
+          placeholder="Enter the password"
+          name="password" 
+          value="<%- contact.password %>"
+          required>
+        </div>
+
+        <div class="form group">
+          <label for="emailTextField">Email</label>
+          <input type="text" class="form-control"
+          id="emailTextField"
+          placeholder="Enter the user's email"
+          name="email"
+          value="<%- contact.email %>" 
+          required>
+        </div>
+
+        <div class="form group">
+          <label for="phonenoTextField">Phone Number</label>
+          <input type="number" step=".01" class="form-control"
+          id="phonenoTextField"
+          placeholder="Enter phone number"
+          name="phonenumber" 
+          value="<%- contact.phonenumber %>"
+          required>
+        </div>
+
+        <div style="padding-top: 10px;">
+          <button class="btn btn-primary" type="submit">
+            <i class="fas fa-edit"> Submit</i></button>
+
+            <a href="/contact-list" class="btn btn-warning">
+              <i class="fas fa-undo"></i> Cancel</a>
+        </div>
+      </form>
+    </div>  
+  </div>
+</div>
+
+
+<%- include ../partials/bottom_nav.ejs %>
+
+<%- include ../partials/footer.ejs %>

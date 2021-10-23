@@ -24,7 +24,7 @@
     "popper.js": "^1.16.1"
   },
   "description": "web app for jeffjsy",
-  "main": "index.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeffjsy/COMP229-Assignment1.git"
