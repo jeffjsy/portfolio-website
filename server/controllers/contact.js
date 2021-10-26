@@ -6,12 +6,11 @@ let jwt = require('jsonwebtoken');
 
 //create a reference to the model
 let Contact = require('../models/contact');
-const { query } = require('express');
 
 
 module.exports.displayContactList = (req, res, next) => {
   Contact.find((err, contactList) => {
-    if(err){
+    if(err) {
         return console.error(err);
     } else {               
         res.render('contact/list', 

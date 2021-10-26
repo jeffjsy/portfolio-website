@@ -22,7 +22,7 @@ function requireAuth(req, res, next) {
 
 
 /* GET route for the contact list - READ operation*/
-router.get('/', contactController.displayContactList);
+router.get('/', requireAuth, contactController.displayContactList);
 
 /* GET route for displaying the Add page - CREATE operation */
 router.get('/add', requireAuth, contactController.displayAddPage);
