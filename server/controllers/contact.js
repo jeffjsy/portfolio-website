@@ -47,7 +47,7 @@ module.exports.processAddPage = (req, res, next) => {
 
 module.exports.displayUpdatePage = (req, res, next) => {
   let id = req.params.id;
-
+  
   Contact.findById(id, (err, contactToUpdate) => {
     if(err){
       console.log(err);
@@ -62,7 +62,7 @@ module.exports.displayUpdatePage = (req, res, next) => {
 
 module.exports.processUpdatePage = (req, res, next) => {
   let id = req.params.id
-  let  updatedContact = Contact({
+  let updatedContact = Contact({
     "_id": id, 
     "username": req.body.username,
     "password": req.body.password,

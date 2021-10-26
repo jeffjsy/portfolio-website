@@ -15,9 +15,9 @@
       <table class="table table-bordered table-striped table-hover">
         <!-- Header Row-->
         <tr>
-          <th class="text-center">Username</th>
-          <th class="text-center">Password</th>
+          <th class="text-center">Name</th>
           <th class="text-center">Email</th>
+           <!-- <th class="text-center">Password</th> -->
           <th class="text-center">Phone Number</th>
           <% if(typeof displayName == 'string' && displayName) { %> 
             <th class="text-center"></th>
@@ -30,8 +30,8 @@
         <% for(let count = 0; count < ContactList.length; count++) { %>
           <tr>
             <td class="text-center"><%- ContactList[count].username %></td>
-            <td class="text-center"><%- ContactList[count].password %></td>
             <td class="text-center"><%- ContactList[count].email %></td>
+             <!-- <td class="text-center"><%- ContactList[count].password %></td> -->            
             <td class="text-center"><%- ContactList[count].phonenumber %></td>
 
             <% if(typeof displayName == 'string' && displayName) { %> 

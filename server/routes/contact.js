@@ -11,15 +11,12 @@ let contactController = require('../controllers/contact');
 
 // helper function for guard purposes 
 function requireAuth(req, res, next) {
-  // check if the user is logged in
-  if(!req.isAuthenticated()){
+  // check if the user is logged in. If not authenticated, redirect to login page
+  if(!req.isAuthenticated()){    
     return res.redirect('/login');
   }
   next();
 }
-
-
-
 
 /* GET route for the contact list - READ operation*/
 router.get('/', requireAuth, contactController.displayContactList);  
