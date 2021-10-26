@@ -18,7 +18,7 @@ module.exports.displayContactList = (req, res, next) => {
         {title: 'Business Contact List', ContactList: contactList, 
         displayName: req.user ? req.user.displayName : ''});
     }
-  }).sort({'username' : 1});
+  }).sort({'username' : 1}); // sorts collection by username desc
 } 
 
 
