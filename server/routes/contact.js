@@ -3,7 +3,11 @@ let router = express.Router();
 let mongoose = require('mongoose');
 const contact = require('../models/contact');
 
+let jwt = require('jsonwebtoken');
+
 let passport = require('passport');
+
+let contactController = require('../controllers/contact');
 
 // helper function for guard purposes 
 function requireAuth(req, res, next) {
@@ -15,7 +19,7 @@ function requireAuth(req, res, next) {
 }
 
 
-let contactController = require('../controllers/contact');
+
 
 /* GET route for the contact list - READ operation*/
 router.get('/', contactController.displayContactList);
@@ -26,11 +30,11 @@ router.get('/add', requireAuth, contactController.displayAddPage);
 /* GET route for processing the Add page - CREATE operation */
 router.post('/add', requireAuth, contactController.processAddPage);
 
-/* POST route for displaying Edit page - UPDATE operation */
-router.get('/edit/:id', requireAuth, contactController.displayEditPage);
+/* POST route for displaying Update page - UPDATE operation */
+router.get('/update/:id', requireAuth, contactController.displayUpdatePage);
 
-/* GET route for processing the Edit page - UPDATE operation */
-router.post('/edit/:id', requireAuth, contactController.processEditPage);
+/* GET route for processing the Update page - UPDATE operation */
+router.post('/update/:id', requireAuth, contactController.processUpdatePage);
 
 /* GET to preform Deletion - DELETE operation */
 router.get('/delete/:id', requireAuth, contactController.performDelete);

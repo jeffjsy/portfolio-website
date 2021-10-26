@@ -22,9 +22,6 @@ router.get('/services', indexController.displayServicesPage);
 /* GET Contact Us page. */
 router.get('/contact', indexController.displayContactPage);
 
-
-
-
 /* GET route for displaying the Login page */
 router.get('/login', indexController.displayLoginPage);
 

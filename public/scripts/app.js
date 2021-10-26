@@ -1,7 +1,7 @@
 /* app.js
 Jeffrey Sy
 980045498
-Sept 29. 2021
+Oct 26. 2021
 */
 
 // IIFE -- Imediately Invoked Function Expression

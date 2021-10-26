@@ -2,20 +2,25 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
+let jwt = require('jsonwebtoken');
+
 //create a reference to the model
 let Contact = require('../models/contact');
+const { query } = require('express');
+
 
 module.exports.displayContactList = (req, res, next) => {
   Contact.find((err, contactList) => {
     if(err){
         return console.error(err);
-    } else {        
+    } else {               
         res.render('contact/list', 
-        {title: 'Contact List', ContactList: contactList, 
+        {title: 'Business Contact List', ContactList: contactList, 
         displayName: req.user ? req.user.displayName : ''});
     }
-  });
-}
+  }).sort({'username' : 1});
+} 
+
 
 module.exports.displayAddPage = (req, res, next) => {
   res.render('contact/add', {title: 'Add Contact', 
@@ -41,22 +46,22 @@ module.exports.processAddPage = (req, res, next) => {
   });
 }
 
-module.exports.displayEditPage = (req, res, next) => {
+module.exports.displayUpdatePage = (req, res, next) => {
   let id = req.params.id;
 
-  Contact.findById(id, (err, contactToEdit) => {
+  Contact.findById(id, (err, contactToUpdate) => {
     if(err){
       console.log(err);
       res.end(err);
     } else {
-      // show the edit view
-      res.render('contact/edit', {title: 'Edit Contact', contact: contactToEdit, 
+      // show the update view
+      res.render('contact/update', {title: 'Update Contact', contact: contactToUpdate, 
       displayName: req.user ? req.user.displayName : ''})
     }
   });
 }
 
-module.exports.processEditPage = (req, res, next) => {
+module.exports.processUpdatePage = (req, res, next) => {
   let id = req.params.id
   let  updatedContact = Contact({
     "_id": id, 
